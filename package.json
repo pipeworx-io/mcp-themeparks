@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-themeparks",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "ThemeParks.wiki MCP — live theme park wait times, schedules, and attraction data.",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-791ae5e104cae4731daee9315b80fa8bc0ffde0ac2947f7a780fac914c6b92b5",
-    "sourceCommit": "b0fb3c31386cf0256dcf1e2f1b3440435a87ec35"
+    "sourceHash": "v1-d90c76d6d50c648cad3e068113eafea43142ca76c6f88d39886bd91531b08c01",
+    "sourceCommit": "66a0692f029179984440cef6938cba7fdd41d66d"
   }
 }
