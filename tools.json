@@ -1,0 +1,58 @@
+[
+  {
+    "name": "list_destinations",
+    "description": "List all theme park destinations (Disney, Universal, Six Flags, SeaWorld, etc.) and their parks. Use this first to discover the PARK entity id, then feed that id to get_wait_times / get_schedule / get_entity.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  },
+  {
+    "name": "get_wait_times",
+    "description": "Live theme park wait times — how long is the wait for an attraction right now. Returns standby and single-rider ride queue minutes plus operating status for every attraction in a park (e.g. Disney / Universal ride queues). Pass a PARK entity_id from list_destinations.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "entity_id": {
+          "type": "string",
+          "description": "A PARK entity id from list_destinations."
+        }
+      },
+      "required": [
+        "entity_id"
+      ]
+    }
+  },
+  {
+    "name": "get_schedule",
+    "description": "Park operating hours — opening and closing times for a theme park over the coming weeks. Pass a PARK entity_id from list_destinations.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "entity_id": {
+          "type": "string",
+          "description": "A PARK entity id from list_destinations."
+        }
+      },
+      "required": [
+        "entity_id"
+      ]
+    }
+  },
+  {
+    "name": "get_entity",
+    "description": "Metadata for any theme park entity (destination, park, attraction, restaurant, or show): name, type, location, timezone, and parent ids.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "entity_id": {
+          "type": "string",
+          "description": "An entity id from list_destinations or get_wait_times."
+        }
+      },
+      "required": [
+        "entity_id"
+      ]
+    }
+  }
+]
